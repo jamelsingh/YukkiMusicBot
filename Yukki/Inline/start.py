@@ -108,12 +108,12 @@ def private_panel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="🗂 Helper Commands Menu", callback_data="shikhar"
+                    text="🧰Helper Commands Menu🧰", callback_data="shikhar"
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    "➕ Add me to your Group",
+                    "➕Add me to your Group➕",
                     url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                 )
             ],
@@ -123,18 +123,18 @@ def private_panel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="🗂 Helper Commands Menu", callback_data="shikhar"
+                    text="🧰Helper Commands Menu🧰", callback_data="shikhar"
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    "➕ Add me to your Group",
+                    "➕Add me to your Group➕",
                     url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                 )
             ],
             [
                 InlineKeyboardButton(
-                    text="📨Support Group", url=f"{SUPPORT_GROUP}"
+                    text="👥Support Group👥", url=f"{SUPPORT_GROUP}"
                 ),
             ],
         ]
@@ -143,18 +143,18 @@ def private_panel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="🗂 Helper Commands Menu", callback_data="shikhar"
+                    text="🧰Helper Commands Menu🧰", callback_data="shikhar"
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    "➕ Add me to your Group",
+                    "➕ Add me to your Group ➕",
                     url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                 )
             ],
             [
                 InlineKeyboardButton(
-                    text="📨Official Channel", url=f"{SUPPORT_CHANNEL}"
+                    text="🌐Official Channel🌐", url=f"{SUPPORT_CHANNEL}"
                 ),
             ],
         ]
@@ -163,21 +163,23 @@ def private_panel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="🗂 Helper Commands Menu", callback_data="shikhar"
-                ),
-            ],
-            [
-                InlineKeyboardButton(
-                    "➕ Add me to your Group",
+                    "➕ Add me to your Group ➕",
                     url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                 )
             ],
+
             [
                 InlineKeyboardButton(
-                    text="📨Official Channel", url=f"{SUPPORT_CHANNEL}"
+                    text="🧰Helper Commands Menu🧰", callback_data="shikhar"
+                ),
+            ],
+            
+            [
+                InlineKeyboardButton(
+                    text="🌐Official Channel🌐", url=f"{SUPPORT_CHANNEL}"
                 ),
                 InlineKeyboardButton(
-                    text="📨Support Group", url=f"{SUPPORT_GROUP}"
+                    text="👥Support Group👥", url=f"{SUPPORT_GROUP}"
                 ),
             ],
         ]
