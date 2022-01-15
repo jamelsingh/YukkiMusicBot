@@ -2,8 +2,8 @@ from typing import Dict, List, Union
 
 from Yukki import db
 
-playlistdb_lofi = db.playlistlofi
-playlistdb_rock = db.playlistrock
+playlistdb_90ssong = db.playlist90sSong
+playlistdb_hitSong = db.playlisthitSong
 playlistdb_sad = db.playlistsad
 playlistdb_party = db.playlistparty
 playlistdb_bollywood = db.playlistbollywood
@@ -13,10 +13,10 @@ playlistdb_others = db.playlistothers
 
 
 async def _get_playlists(chat_id: int, type: str) -> Dict[str, int]:
-    if type == "Lofi":
-        xd = playlistdb_lofi
-    elif type == "Weeb":
-        xd = playlistdb_rock
+    if type == "90sSong":
+        xd = playlistdb_90sSong
+    elif type == "HitSong":
+        xd = playlistdb_hitSong
     elif type == "Sad":
         xd = playlistdb_sad
     elif type == "Party":
@@ -57,8 +57,8 @@ async def save_playlist(chat_id: int, name: str, note: dict, type: str):
     name = name
     _notes = await _get_playlists(chat_id, type)
     _notes[name] = note
-    if type == "Lofi":
-        xd = playlistdb_lofi
+    if type == "90sSong":
+        xd = playlistdb_90sSong
     elif type == "Weeb":
         xd = playlistdb_rock
     elif type == "Sad":
@@ -81,8 +81,8 @@ async def save_playlist(chat_id: int, name: str, note: dict, type: str):
 async def delete_playlist(chat_id: int, name: str, type: str) -> bool:
     notesd = await _get_playlists(chat_id, type)
     name = name
-    if type == "Lofi":
-        xd = playlistdb_lofi
+    if type == "90sSong":
+        xd = playlistdb_90sSong
     elif type == "Weeb":
         xd = playlistdb_rock
     elif type == "Sad":
