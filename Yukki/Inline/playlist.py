@@ -64,14 +64,14 @@ def play_genre_playlist(user_id, type, videoid):
                 callback_data=f"play_playlist {user_id}|{type}|SadSong",
             ),
             InlineKeyboardButton(
-                text=f"LoveSong",
-                callback_data=f"play_playlist {user_id}|{type}|LoveSong",
+                text=f"HitSong",
+                callback_data=f"play_playlist {user_id}|{type}|HitSong",
             ),
         ],
         [
             InlineKeyboardButton(
-                text=f"melodysong",
-                callback_data=f"play_playlist {user_id}|{type}|melodysong",
+                text=f"MelodySong",
+                callback_data=f"play_playlist {user_id}|{type}|MelodySong",
             ),
             InlineKeyboardButton(
                 text=f"OtherSong",
@@ -93,8 +93,8 @@ def add_genre_markup(user_id, type, videoid):
     buttons = [
         [
             InlineKeyboardButton(
-                text=f"✚ LoveSong",
-                callback_data=f"add_playlist {videoid}|{type}|LoveSong",
+                text=f"✚ HitSong",
+                callback_data=f"add_playlist {videoid}|{type}|HitSong",
             ),
             InlineKeyboardButton(
                 text=f"✚ SadSong",
@@ -123,8 +123,8 @@ def add_genre_markup(user_id, type, videoid):
         ],
         [
             InlineKeyboardButton(
-                text=f"✚ melodysong",
-                callback_data=f"add_playlist {videoid}|{type}|melodysong",
+                text=f"✚ MelodySong",
+                callback_data=f"add_playlist {videoid}|{type}|MelodySong",
             ),
             InlineKeyboardButton(
                 text=f"✚ OtherSong",
@@ -145,7 +145,7 @@ def check_genre_markup(type, videoid, user_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text=f"LoveSong", callback_data=f"check_playlist {type}|LoveSong"
+                text=f"HitSong", callback_data=f"check_playlist {type}|HitSong"
             ),
             InlineKeyboardButton(
                 text=f"SadSong", callback_data=f"check_playlist {type}|SadSong"
@@ -171,8 +171,8 @@ def check_genre_markup(type, videoid, user_id):
         ],
         [
             InlineKeyboardButton(
-                text=f"melodysong",
-                callback_data=f"check_playlist {type}|melodysong",
+                text=f"MelodySong",
+                callback_data=f"check_playlist {type}|MelodySong",
             ),
             InlineKeyboardButton(
                 text=f"OtherSong", callback_data=f"check_playlist {type}|OtherSong"
