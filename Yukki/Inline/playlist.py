@@ -40,42 +40,42 @@ def play_genre_playlist(user_id, type, videoid):
     buttons = [
         [
             InlineKeyboardButton(
-                text=f"Bollywood",
-                callback_data=f"play_playlist {user_id}|{type}|Bollywood",
+                text=f"ARRSong",
+                callback_data=f"play_playlist {user_id}|{type}|ARRSong",
             ),
             InlineKeyboardButton(
-                text=f"Hollywood",
-                callback_data=f"play_playlist {user_id}|{type}|Hollywood",
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text=f"Party",
-                callback_data=f"play_playlist {user_id}|{type}|Party",
-            ),
-            InlineKeyboardButton(
-                text=f"Lofi",
-                callback_data=f"play_playlist {user_id}|{type}|Lofi",
+                text=f"LoveSong",
+                callback_data=f"play_playlist {user_id}|{type}|LoveSong",
             ),
         ],
         [
             InlineKeyboardButton(
-                text=f"Sad",
-                callback_data=f"play_playlist {user_id}|{type}|Sad",
+                text=f"NewSong",
+                callback_data=f"play_playlist {user_id}|{type}|NewSong",
             ),
             InlineKeyboardButton(
-                text=f"Weeb",
-                callback_data=f"play_playlist {user_id}|{type}|Weeb",
+                text=f"90sSong",
+                callback_data=f"play_playlist {user_id}|{type}|90sSong",
             ),
         ],
         [
             InlineKeyboardButton(
-                text=f"Punjabi",
-                callback_data=f"play_playlist {user_id}|{type}|Punjabi",
+                text=f"SadSong",
+                callback_data=f"play_playlist {user_id}|{type}|SadSong",
             ),
             InlineKeyboardButton(
-                text=f"Others",
-                callback_data=f"play_playlist {user_id}|{type}|Others",
+                text=f"LoveSong",
+                callback_data=f"play_playlist {user_id}|{type}|LoveSong",
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text=f"melodysong",
+                callback_data=f"play_playlist {user_id}|{type}|melodysong",
+            ),
+            InlineKeyboardButton(
+                text=f"OtherSong",
+                callback_data=f"play_playlist {user_id}|{type}|OtherSong",
             ),
         ],
         [
@@ -93,42 +93,42 @@ def add_genre_markup(user_id, type, videoid):
     buttons = [
         [
             InlineKeyboardButton(
-                text=f"✚ Weeb",
-                callback_data=f"add_playlist {videoid}|{type}|Weeb",
+                text=f"✚ LoveSong",
+                callback_data=f"add_playlist {videoid}|{type}|LoveSong",
             ),
             InlineKeyboardButton(
-                text=f"✚ Sad",
-                callback_data=f"add_playlist {videoid}|{type}|Sad",
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text=f"✚ Party",
-                callback_data=f"add_playlist {videoid}|{type}|Party",
-            ),
-            InlineKeyboardButton(
-                text=f"✚ Lofi",
-                callback_data=f"add_playlist {videoid}|{type}|Lofi",
+                text=f"✚ SadSong",
+                callback_data=f"add_playlist {videoid}|{type}|SadSong",
             ),
         ],
         [
             InlineKeyboardButton(
-                text=f"✚ Bollywood",
-                callback_data=f"add_playlist {videoid}|{type}|Bollywood",
+                text=f"✚ NewSong",
+                callback_data=f"add_playlist {videoid}|{type}|NewSong",
             ),
             InlineKeyboardButton(
-                text=f"✚ Hollywood",
-                callback_data=f"add_playlist {videoid}|{type}|Hollywood",
+                text=f"✚ 90sSong",
+                callback_data=f"add_playlist {videoid}|{type}|90sSong",
             ),
         ],
         [
             InlineKeyboardButton(
-                text=f"✚ Punjabi",
-                callback_data=f"add_playlist {videoid}|{type}|Punjabi",
+                text=f"✚ ARRSong",
+                callback_data=f"add_playlist {videoid}|{type}|ARRSong",
             ),
             InlineKeyboardButton(
-                text=f"✚ Others",
-                callback_data=f"add_playlist {videoid}|{type}|Others",
+                text=f"✚ LoveSong",
+                callback_data=f"add_playlist {videoid}|{type}|LoveSong",
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text=f"✚ melodysong",
+                callback_data=f"add_playlist {videoid}|{type}|melodysong",
+            ),
+            InlineKeyboardButton(
+                text=f"✚ OtherSong",
+                callback_data=f"add_playlist {videoid}|{type}|OtherSong",
             ),
         ],
         [
@@ -145,37 +145,37 @@ def check_genre_markup(type, videoid, user_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text=f"Weeb", callback_data=f"check_playlist {type}|Weeb"
+                text=f"LoveSong", callback_data=f"check_playlist {type}|LoveSong"
             ),
             InlineKeyboardButton(
-                text=f"Sad", callback_data=f"check_playlist {type}|Sad"
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text=f"Party", callback_data=f"check_playlist {type}|Party"
-            ),
-            InlineKeyboardButton(
-                text=f"Lofi", callback_data=f"check_playlist {type}|Lofi"
+                text=f"SadSong", callback_data=f"check_playlist {type}|SadSong"
             ),
         ],
         [
             InlineKeyboardButton(
-                text=f"Bollywood",
-                callback_data=f"check_playlist {type}|Bollywood",
+                text=f"NewSong", callback_data=f"check_playlist {type}|NewSong"
             ),
             InlineKeyboardButton(
-                text=f"Hollywood",
-                callback_data=f"check_playlist {type}|Hollywood",
+                text=f"90sSong", callback_data=f"check_playlist {type}|90sSong"
             ),
         ],
         [
             InlineKeyboardButton(
-                text=f"Punjabi",
-                callback_data=f"check_playlist {type}|Punjabi",
+                text=f"ARRSong",
+                callback_data=f"check_playlist {type}|ARRSong",
             ),
             InlineKeyboardButton(
-                text=f"Others", callback_data=f"check_playlist {type}|Others"
+                text=f"LoveSong",
+                callback_data=f"check_playlist {type}|LoveSong",
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text=f"melodysong",
+                callback_data=f"check_playlist {type}|melodysong",
+            ),
+            InlineKeyboardButton(
+                text=f"OtherSong", callback_data=f"check_playlist {type}|OtherSong"
             ),
         ],
         [InlineKeyboardButton(text="🗑 Close Menu", callback_data="close")],
