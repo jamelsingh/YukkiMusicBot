@@ -4,31 +4,31 @@ from Yukki import db
 
 playlistdb_90ssong = db.playlist90sSong
 playlistdb_hitSong = db.playlisthitSong
-playlistdb_sad = db.playlistsad
-playlistdb_party = db.playlistparty
-playlistdb_bollywood = db.playlistbollywood
-playlistdb_hollywood = db.playlisthollywood
-playlistdb_punjabi = db.playlistpunjabi
-playlistdb_others = db.playlistothers
+playlistdb_sadsong = db.playlistsadsong
+playlistdb_newsong = db.playlistnewsong
+playlistdb_arrsong = db.playlistarrsong
+playlistdb_lovesong = db.playlistlovesong
+playlistdb_melodysong = db.playlistmelodysong
+playlistdb_otherssong = db.playlistothersong
 
 
 async def _get_playlists(chat_id: int, type: str) -> Dict[str, int]:
     if type == "90sSong":
-        xd = playlistdb_90sSong
+        xd = playlistdb_90ssong
     elif type == "HitSong":
         xd = playlistdb_hitSong
-    elif type == "Sad":
-        xd = playlistdb_sad
-    elif type == "Party":
-        xd = playlistdb_party
-    elif type == "Bollywood":
-        xd = playlistdb_bollywood
-    elif type == "Hollywood":
-        xd = playlistdb_hollywood
-    elif type == "Punjabi":
-        xd = playlistdb_punjabi
-    elif type == "Others":
-        xd = playlistdb_others
+    elif type == "SadSong":
+        xd = playlistdb_sadsong
+    elif type == "NewSong":
+        xd = playlistdb_newsong
+    elif type == "ARRSong":
+        xd = playlistdb_arrsong
+    elif type == "LoveSong":
+        xd = playlistdb_lovesong
+    elif type == "MelodySong":
+        xd = playlistdb_melodysong
+    elif type == "OtherSong":
+        xd = playlistdb_othersong
     _notes = await xd.find_one({"chat_id": chat_id})
     if not _notes:
         return {}
@@ -58,21 +58,21 @@ async def save_playlist(chat_id: int, name: str, note: dict, type: str):
     _notes = await _get_playlists(chat_id, type)
     _notes[name] = note
     if type == "90sSong":
-        xd = playlistdb_90sSong
-    elif type == "Weeb":
-        xd = playlistdb_rock
-    elif type == "Sad":
-        xd = playlistdb_sad
-    elif type == "Party":
-        xd = playlistdb_party
-    elif type == "Bollywood":
-        xd = playlistdb_bollywood
-    elif type == "Hollywood":
-        xd = playlistdb_hollywood
-    elif type == "Punjabi":
-        xd = playlistdb_punjabi
-    elif type == "Others":
-        xd = playlistdb_others
+        xd = playlistdb_90ssong
+    elif type == "HitSong":
+        xd = playlistdb_hitSong
+    elif type == "SadSong":
+        xd = playlistdb_sadsong
+    elif type == "NewSong":
+        xd = playlistdb_newsong
+    elif type == "ARRSong":
+        xd = playlistdb_arrsong
+    elif type == "LoveSong":
+        xd = playlistdb_lovesong
+    elif type == "MelodySong":
+        xd = playlistdb_melodysong
+    elif type == "OtherSong":
+        xd = playlistdb_othersong
     await xd.update_one(
         {"chat_id": chat_id}, {"$set": {"notes": _notes}}, upsert=True
     )
@@ -82,21 +82,21 @@ async def delete_playlist(chat_id: int, name: str, type: str) -> bool:
     notesd = await _get_playlists(chat_id, type)
     name = name
     if type == "90sSong":
-        xd = playlistdb_90sSong
-    elif type == "Weeb":
-        xd = playlistdb_rock
-    elif type == "Sad":
-        xd = playlistdb_sad
-    elif type == "Party":
-        xd = playlistdb_party
-    elif type == "Bollywood":
-        xd = playlistdb_bollywood
-    elif type == "Hollywood":
-        xd = playlistdb_hollywood
-    elif type == "Punjabi":
-        xd = playlistdb_punjabi
-    elif type == "Others":
-        xd = playlistdb_others
+        xd = playlistdb_90ssong
+    elif type == "HitSong":
+        xd = playlistdb_hitSong
+    elif type == "SadSong":
+        xd = playlistdb_sadsong
+    elif type == "NewSong":
+        xd = playlistdb_newsong
+    elif type == "ARRSong":
+        xd = playlistdb_arrsong
+    elif type == "LoveSong":
+        xd = playlistdb_lovesong
+    elif type == "MelodySong":
+        xd = playlistdb_melodysong
+    elif type == "OtherSong":
+        xd = playlistdb_othersong
     if name in notesd:
         del notesd[name]
         await xd.update_one(
