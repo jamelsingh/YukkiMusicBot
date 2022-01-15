@@ -161,14 +161,14 @@ options = [
 ]
 
 options_Genre = [
-    "Rock",
-    "Sad",
-    "Party",
-    "Lofi",
-    "Bollywood",
-    "Hollywood",
-    "Punjabi",
-    "Others",
+    "HitSong",
+    "SadSong",
+    "NewSong",
+    "90sSong",
+    "ARRSong",
+    "Lovesong",
+    "MelodySong",
+    "OtherSong",
 ]
 
 
