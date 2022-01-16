@@ -1,15 +1,14 @@
 from typing import Dict, List, Union
 
 from Yukki import db
-
-playlistdb_90ssong = db.playlist90sSong
-playlistdb_hitSong = db.playlisthitSong
-playlistdb_sadsong = db.playlistsadsong
-playlistdb_newsong = db.playlistnewsong
-playlistdb_arrsong = db.playlistarrsong
-playlistdb_lovesong = db.playlistlovesong
-playlistdb_melodysong = db.playlistmelodysong
-playlistdb_otherssong = db.playlistothersong
+playlistdb_lofi = db.playlistlofi
+playlistdb_rock = db.playlistrock
+playlistdb_sad = db.playlistsad
+playlistdb_party = db.playlistparty
+playlistdb_bollywood = db.playlistbollywood
+playlistdb_hollywood = db.playlisthollywood
+playlistdb_punjabi = db.playlistpunjabi
+playlistdb_others = db.playlistothers
 
 
 async def _get_playlists(chat_id: int, type: str) -> Dict[str, int]:
