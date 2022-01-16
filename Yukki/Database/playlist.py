@@ -1,6 +1,7 @@
 from typing import Dict, List, Union
 
 from Yukki import db
+
 playlistdb_lofi = db.playlistlofi
 playlistdb_rock = db.playlistrock
 playlistdb_sad = db.playlistsad
@@ -13,21 +14,21 @@ playlistdb_others = db.playlistothers
 
 async def _get_playlists(chat_id: int, type: str) -> Dict[str, int]:
     if type == "90sSong":
-        xd = playlistdb_90ssong
+        xd = playlistdb_lofi
     elif type == "HitSong":
-        xd = playlistdb_hitSong
+        xd = playlistdb_rock
     elif type == "SadSong":
-        xd = playlistdb_sadsong
+        xd = playlistdb_sad
     elif type == "NewSong":
-        xd = playlistdb_newsong
+        xd = playlistdb_party
     elif type == "ARRSong":
-        xd = playlistdb_arrsong
+        xd = playlistdb_bollywood
     elif type == "LoveSong":
-        xd = playlistdb_lovesong
+        xd = playlistdb_hollywood
     elif type == "MelodySong":
-        xd = playlistdb_melodysong
+        xd = playlistdb_punjabi
     elif type == "OtherSong":
-        xd = playlistdb_othersong
+        xd = playlistdb_others
     _notes = await xd.find_one({"chat_id": chat_id})
     if not _notes:
         return {}
@@ -57,21 +58,21 @@ async def save_playlist(chat_id: int, name: str, note: dict, type: str):
     _notes = await _get_playlists(chat_id, type)
     _notes[name] = note
     if type == "90sSong":
-        xd = playlistdb_90ssong
+        xd = playlistdb_lofi
     elif type == "HitSong":
-        xd = playlistdb_hitSong
+        xd = playlistdb_rock
     elif type == "SadSong":
-        xd = playlistdb_sadsong
+        xd = playlistdb_sad
     elif type == "NewSong":
-        xd = playlistdb_newsong
+        xd = playlistdb_party
     elif type == "ARRSong":
-        xd = playlistdb_arrsong
+        xd = playlistdb_bollywood
     elif type == "LoveSong":
-        xd = playlistdb_lovesong
+        xd = playlistdb_hollywood
     elif type == "MelodySong":
-        xd = playlistdb_melodysong
+        xd = playlistdb_punjabi
     elif type == "OtherSong":
-        xd = playlistdb_othersong
+        xd = playlistdb_others
     await xd.update_one(
         {"chat_id": chat_id}, {"$set": {"notes": _notes}}, upsert=True
     )
@@ -81,21 +82,21 @@ async def delete_playlist(chat_id: int, name: str, type: str) -> bool:
     notesd = await _get_playlists(chat_id, type)
     name = name
     if type == "90sSong":
-        xd = playlistdb_90ssong
+        xd = playlistdb_lofi
     elif type == "HitSong":
-        xd = playlistdb_hitSong
+        xd = playlistdb_rock
     elif type == "SadSong":
-        xd = playlistdb_sadsong
+        xd = playlistdb_sad
     elif type == "NewSong":
-        xd = playlistdb_newsong
+        xd = playlistdb_party
     elif type == "ARRSong":
-        xd = playlistdb_arrsong
+        xd = playlistdb_hollywood
     elif type == "LoveSong":
         xd = playlistdb_lovesong
     elif type == "MelodySong":
-        xd = playlistdb_melodysong
+        xd = playlistdb_punjabi
     elif type == "OtherSong":
-        xd = playlistdb_othersong
+        xd = playlistdb_others
     if name in notesd:
         del notesd[name]
         await xd.update_one(
