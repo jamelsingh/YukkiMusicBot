@@ -234,7 +234,9 @@ My name is {BOT_NAME}.
 
 🔵 A Telegram Music and Video Streaming bot with some useful features.
 
-🔴 Hit /help to find out more about how to use me to my full features. / """
+🔴 Hit /help to find out more about how to use me to my full features. 
+
+⚪ For any help Contact: @IAMJAMELSINGH """
 
 
 @app.on_message(filters.command("help") & filters.private)
