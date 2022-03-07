@@ -55,6 +55,7 @@ Read [Docs](https://notreallyshikhar.gitbook.io/yukkimusicbot/deployment/require
     
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fjamelsingh%2FYukkiMusicBot%2Fblob%2Fmaster%2FREADME.md)
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?button-url=https://github.com/jamelsingh/YukkiMusicBot&template=https://github.com/jamelsingh/YukkiMusicBot)
 <h4>Click the button below to deploy Yukki on Heroku!</h4>    
 <p><a href="https://vegetaxd.me/Yukki"><img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="200""/></a></p>
     
